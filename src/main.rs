@@ -1,8 +1,11 @@
-fn main() {
-    let (a, mut b): (bool, bool) = (true, false);
-    // a = true,不可变; b = false，可变
-    println!("a = {:?}, b = {:?}", a, b);
+// https://course.rs/basic/base-type/char-bool.html
 
-    b = true;
-    assert_eq!(a, b);
+use num::complex::Complex;
+
+fn main() {
+    let a = Complex { re: 2.1, im: -1.2 };
+    let b = Complex::new(11.1, 22.2);
+    let result = a + b;
+
+    println!("{} + {}i", result.re, result.im)
 }
