@@ -1,11 +1,15 @@
 // https://course.rs/basic/base-type/char-bool.html
 
-use num::complex::Complex;
+fn plus_or_minus(x: i32) -> i32 {
+    if x > 5 {
+        return x - 5;
+    }
+
+    x + 5
+}
 
 fn main() {
-    let a = Complex { re: 2.1, im: -1.2 };
-    let b = Complex::new(11.1, 22.2);
-    let result = a + b;
+    let x = plus_or_minus(5);
 
-    println!("{} + {}i", result.re, result.im)
+    println!("The value of x is: {}", x);
 }
